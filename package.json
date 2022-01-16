@@ -1,0 +1,20 @@
+{
+  "name": "coordtolinkbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": "16.*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "dankadolba",
+  "license": "ISC",
+  "description": "Transform coord to link and help with smth another problem into discrord chats with in game actions"
+}
