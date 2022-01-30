@@ -1,7 +1,7 @@
 module.exports = {
     artiDefPrediction (artiInfo) {
         let testPosition = 100;
-        let maxPower = 100;
+        let maxPower = 10500000;
         let natarsT1 = 0.26;
         let natarsT2 = 0.14;
         let natarsT3 = 0.2083;
