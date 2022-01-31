@@ -135,7 +135,7 @@ client.on('messageCreate', message => {
 			}
 			break;
 		case "help":
-			message.channel.send({content: "FAQ can be found here https://github.com/dankadolba/CoordToLink"});
+			message.channel.send({content: "FAQ can be found here https://github.com/dankadolba/CoordToLinkBot#coordtolink"});
 			break;
 		case "off":
 			try {
