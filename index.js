@@ -3,6 +3,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const { hyperlink } = require('@discordjs/builders');
 const { token, server } = require('./config.json');
 const matchAll = require('string.prototype.matchall');
+
 let heroFind = require('./commands/hero.js');
 
 client.on('ready', () => {
@@ -135,7 +136,7 @@ client.on('messageCreate', message => {
 			}
 			break;
 		case "help":
-			message.channel.send({content: "FAQ can be found here https://github.com/dankadolba/CoordToLinkBot#coordtolink"});
+			message.channel.send({content: "FAQ can be found here https://github.com/dankadolba/CoordToLinkBot/blob/master/README.en.md"});
 			break;
 		case "off":
 			try {
