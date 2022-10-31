@@ -17,7 +17,7 @@ var heroArrTracker = [];
 
 
 client.on('messageCreate', message => {
-	
+
 	if (message.author.bot) return;
 
 	if (!message.content.startsWith(prefix)) return;
@@ -43,7 +43,7 @@ client.on('messageCreate', message => {
 				
 
 			if (spamType === "19+1") {
-				let spam_19_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troops[0][t1]=19" + "&troops[0][t8]=1" + "&c=3" + '&gid=16'
+				let spam_19_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troop[t1]=19" + "&troop[t8]=1" + "&c=3" + '&gid=16&eventType=3'
 
 				const troopsButton_19_1 = new MessageActionRow()
 					.addComponents(
@@ -55,7 +55,7 @@ client.on('messageCreate', message => {
 				message.channel.send({content: '** **', components: [troopsButton_19_1]})
 			}
 			else if (spamType === "17+1+1+1") {
-				let spam_17_1_1_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troops[0][t1]=17" + "&troops[0][t6]=1" + "&troops[0][t7]=1" + "&troops[0][t8]=1" +  "&c=3" + '&gid=16'
+				let spam_17_1_1_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troop[t1]=17" + "&troop[t6]=1" + "&troop[t7]=1" + "&troop[t8]=1" +  "&c=3" + '&gid=16&eventType=3'
 			
 				const troopsButton_17_1_1_1 = new MessageActionRow()
 					.addComponents(
@@ -206,6 +206,8 @@ client.on('messageCreate', message => {
 
 			break;	
 		case "hero":
+			message.reply("Doesnt work from since May 2022. Coming soon...");
+			/*
 			let heroLink = args[0].split("/body/");
 
 			try {
@@ -233,6 +235,7 @@ client.on('messageCreate', message => {
 				console.log(err + "command: " + command + "args" + args);
 				message.reply("Please check that command have next params order !hero link")
 			}
+			*/
 			break;
 		case "spamlist":
 			let spamListCommand = require('./commands/spamlist.js');
@@ -248,7 +251,7 @@ client.on('messageCreate', message => {
 						let xCoord = spamListForButton[i];
 						let yCoord = spamListForButton[i+1];
 						if (spamListForButton[i+2] == '17+1+1+1') {
-							let spam_17_1_1_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troops[0][t1]=17" + "&troops[0][t6]=1" + "&troops[0][t7]=1" + "&troops[0][t8]=1" + "&c=3" + '&gid=16';
+							let spam_17_1_1_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troop[t1]=17" + "&troop[t6]=1" + "&troop[t7]=1" + "&troop[t8]=1" + "&c=3" + '&gid=16&eventType=3';
 							spamLink = hyperlink('Spam target ' + k + " to " + xCoord + "/" + yCoord , spam_17_1_1_1);
 							k++;
 							spamListArr = spamListArr + spamLink + "\n --- \n"; 
@@ -256,7 +259,7 @@ client.on('messageCreate', message => {
 							let xCoord = spamListForButton[i];
 							let yCoord = spamListForButton[i+1];
 		
-							let spam_19_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troops[0][t1]=19" + "&troops[0][t8]=1" + "&c=3" + '&gid=16';
+							let spam_19_1 = server + 'build.php?id=39&tt=2&x=' +  xCoord + '&y=' + yCoord + "&troop[t1]=19" + "&troop[t8]=1" + "&c=3" + '&gid=16&eventType=3';
 							spamLink = hyperlink('Spam target ' + k + " to " + xCoord + "/" + yCoord, spam_19_1);
 							k++;
 							spamListArr = spamListArr + spamLink + "\n --- \n";
@@ -309,6 +312,8 @@ client.on('messageCreate', message => {
 
 			break;
 		case "herotracker":
+			message.reply("Doesnt work since May 2022. Coming soon...");
+			/*
 			let heroTrack = require('./commands/herotracker.js');
 			try {
 
@@ -331,6 +336,7 @@ client.on('messageCreate', message => {
 				console.log(err + "command: " + command + "args" + args);
 				message.reply("Please check that command have next params order !herotracker link nickname");
 			}
+			*/
 			break;
 		case "offclear":
 			artiInf.length = 0;
