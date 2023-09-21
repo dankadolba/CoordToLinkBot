@@ -93,10 +93,10 @@ module.exports = {
                             + Math.round(natarsT7 * natarStrength / 2.72) + ","
                             + Math.round(natarsT8 * natarStrength / 2.72) + "U";
 
-        let uniueDef = "http://travian.kirilloid.ru/warsim2.php#a:r6p200m5u,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + uniqueDefCount;
-        let greatDef = "http://travian.kirilloid.ru/warsim2.php#a:r6p200m5u,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + greatDefCount;
-        let smallDef = "http://travian.kirilloid.ru/warsim2.php#a:r6p200m5u,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + smallDefCount;
-        let foolDef = "http://travian.kirilloid.ru/warsim2.php#a:r6p200m5u,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + foolDefCount;
+        let uniueDef = "http://travian.kirilloid.ru/warsim2.php#a:p200m5u,,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + uniqueDefCount;
+        let greatDef = "http://travian.kirilloid.ru/warsim2.php#a:p200m5u,,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + greatDefCount;
+        let smallDef = "http://travian.kirilloid.ru/warsim2.php#a:p200m5u,,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + smallDefCount;
+        let foolDef = "http://travian.kirilloid.ru/warsim2.php#a:p200m5u,,,,18kU!hs100,100ci7,5Ib#d:p200r4m9#r4u" + foolDefCount;
 
 
 

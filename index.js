@@ -3,6 +3,9 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const { hyperlink } = require('@discordjs/builders');
 const { token, server } = require('./config.json');
 const matchAll = require('string.prototype.matchall');
+var getPixels = require("get-pixels")
+let request = require(`request`);
+let fs = require(`fs`);
 
 let heroFind = require('./commands/hero.js');
 
@@ -14,6 +17,7 @@ client.on('ready', () => {
 const prefix = "!";
 var artiInf = [];
 var heroArrTracker = [];
+var rgbTest = [];
 
 
 client.on('messageCreate', message => {
@@ -341,6 +345,49 @@ client.on('messageCreate', message => {
 		case "offclear":
 			artiInf.length = 0;
 			message.channel.send({content: "**Information about off successfully deleted**"});
+			break;
+		case "newht":
+			console.log(message.content);
+
+			if(message.attachments.first()) {
+				if(message.attachments.first().contentType === `image/png`){
+					download(message.attachments.first().url);
+				}
+			};
+			
+
+			function download(url){
+				
+    			request.get(url)
+      			  .on('error', console.error)
+					heroimglink = url;
+			};
+
+
+			console.log(heroimglink);
+
+			let x = 143;
+			let y = 59;
+			
+
+			let item = getPixels(heroimglink, function(err, pixels) {
+				if(err) {
+				  console.log("Bad image path");
+				  return;
+				}
+
+				const r = pixels.get(x, y, 0);
+				const g = pixels.get(x, y, 1);
+				const b = pixels.get(x, y, 2);
+				const a = pixels.get(x, y, 3);
+				console.log(r,g,b);
+				rgbTest === r, g, b;
+			  });
+			
+			  message.reply({content: "meow " + rgbTest});
+
+			//fs.unlink('heroimg.png');
+			
 			break;
 	}
 })
